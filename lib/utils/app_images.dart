@@ -25,6 +25,10 @@ class Assets {
   /// assets/images/key.jpg
   static const String imagesKey = "assets/images/key.jpg";
 
+  /// Assets for imagesShop
+  /// assets/images/shop.png
+  static const String imagesShop = "assets/images/shop.png";
+
   /// Assets for imagesShoppingBag
   /// assets/images/shopping_bag.jpg
   static const String imagesShoppingBag = "assets/images/shopping_bag.jpg";

@@ -28,7 +28,7 @@ class SocialMediaButton extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(10),
         alignment: Alignment.center,
-        height: 45.h,
+        // height: 50.h,
         decoration: BoxDecoration(
           border: Border.all(color: borderColor),
           borderRadius: BorderRadius.circular(12),
@@ -47,7 +47,7 @@ class SocialMediaButton extends StatelessWidget {
             ),
             Text(
               text,
-              style: Styles.TextStyle16.copyWith(
+              style: Styles.TextStyle14.copyWith(
                   color: texrColor, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),

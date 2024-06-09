@@ -12,6 +12,7 @@ class SignupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Column(
@@ -29,7 +30,7 @@ class SignupView extends StatelessWidget {
             const SizedBox(
               height: 32,
             ),
-            Align(
+            const Align(
               alignment: Alignment.topRight,
               child: const Text(
                 "انشاء حساب جديد",
@@ -81,40 +82,31 @@ class SignupView extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: SocialMediaButton(
-                          icon: FontAwesomeIcons.googlePlusG,
-                          // iconSize: 25,
-                          borderColor: Colors.red,
-                          iconColor: Colors.red,
-                          text: "Google",
-                          texrColor: Colors.red,
-                          onTap: () {}),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10.w,
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width / 2.5,
-                      child: SocialMediaButton(
-                          icon: Icons.facebook,
-                          borderColor: Colors.blue.shade900,
-                          text: "Facebook",
-                          texrColor: Colors.blue.shade900,
-                          onTap: () {}),
-                    ),
-                  ),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  child: SocialMediaButton(
+                      icon: FontAwesomeIcons.googlePlusG,
+                      // iconSize: 25,
+                      borderColor: Colors.red,
+                      iconColor: Colors.red,
+                      text: "Google",
+                      texrColor: Colors.red,
+                      onTap: () {}),
+                ),
+                SizedBox(
+                  width: 10.w,
+                ),
+                SizedBox(
+                  child: SocialMediaButton(
+                      icon: Icons.facebook,
+                      borderColor: Colors.blue.shade900,
+                      text: "Facebook",
+                      texrColor: Colors.blue.shade900,
+                      onTap: () {}),
+                ),
+              ],
             ),
             const Spacer(),
             const Row(
@@ -135,7 +127,7 @@ class SignupView extends StatelessWidget {
                 ),
                 Text("لديك حستب بالفعل؟"),
               ],
-            )
+            ),
           ],
         ),
       ),
