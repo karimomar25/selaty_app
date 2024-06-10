@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/core/utils/styles.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/SignUp/signup_view.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/SignUp/widgets/custom_button.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/SignUp/widgets/custom_form.dart';
+import 'package:selaty_app/features/auth/presentation/LogIn/reset_password.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/signup_view.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_form.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -74,11 +75,25 @@ class LoginView extends StatelessWidget {
                 text: "كلمة السر",
                 icon: Icon(Icons.visibility),
               ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  child: Text(
+                    "هل نسيت كلمة السر",
+                    style: Styles.TextStyle16.copyWith(color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Get.to(const ResetPassword());
+                  },
+                ),
+              ),
               SizedBox(
                 height: 22.h,
               ),
-              CustomButton(
-                  text: "تسجيل الدخول", color: Colors.green, onTap: () {}),
+              const CustomButton(
+                text: "تسجيل الدخول",
+                color: Colors.green,
+              ),
               const Spacer(
                 flex: 2,
               ),

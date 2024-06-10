@@ -3,11 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:selaty_app/core/utils/styles.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/LogIn/login_view.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/SignUp/widgets/custom_button.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/SignUp/widgets/custom_form.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/SignUp/widgets/social_media_button.dart';
+import 'package:selaty_app/features/auth/presentation/LogIn/login_view.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/phone_auth.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_form.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/widgets/social_media_button.dart';
 
 class SignupView extends StatelessWidget {
   const SignupView({super.key});
@@ -75,7 +76,14 @@ class SignupView extends StatelessWidget {
               SizedBox(
                 height: 22.h,
               ),
-              CustomButton(text: "اشتراك", color: Colors.green, onTap: () {}),
+              GestureDetector(
+                  onTap: () {
+                    Get.to(const PhoneAuth());
+                  },
+                  child: const CustomButton(
+                    text: "اشتراك",
+                    color: Colors.green,
+                  )),
               const SizedBox(
                 height: 25,
               ),
