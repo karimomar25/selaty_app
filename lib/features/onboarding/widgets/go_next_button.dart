@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:selaty_app/core/controllers/onboarding_controller.dart';
 import 'package:selaty_app/features/login_or_signup/presentation/Login_Or_Signup/login_or_signup_view.dart';
 
 class GoNextButton extends StatelessWidget {

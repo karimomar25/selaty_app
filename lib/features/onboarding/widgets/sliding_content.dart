@@ -39,6 +39,7 @@ class SlidingContent extends StatelessWidget {
               Align(
                   alignment: Alignment.centerRight,
                   child: Text(
+                      textAlign: TextAlign.right,
                       style: Styles.TextStyle30Bold.copyWith(
                           color: onBoardingList[index].titleColor),
                       onBoardingList[index].title)),
@@ -48,13 +49,9 @@ class SlidingContent extends StatelessWidget {
               Align(
                   alignment: Alignment.centerRight,
                   child: Text(
+                      textAlign: TextAlign.right,
                       style: Styles.TextStyle24.copyWith(color: Colors.grey),
                       onBoardingList[index].desc)),
-              Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                      style: Styles.TextStyle24.copyWith(color: Colors.grey),
-                      onBoardingList[index].secondDesc)),
               const Spacer(
                 flex: 3,
               ),
