@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:selaty_app/core/controllers/onboarding_controller.dart';
 import 'package:selaty_app/core/models/onboarding_model.dart';
 import 'package:selaty_app/core/utils/styles.dart';
-import 'package:selaty_app/features/onboarding/widgets/dot_controller.dart';
-import 'package:selaty_app/features/onboarding/widgets/go_next_button.dart';
+import 'package:selaty_app/features/onboarding/presentation/widgets/dot_controller.dart';
+import 'package:selaty_app/features/onboarding/presentation/widgets/go_next_button.dart';
 
 class SlidingContent extends StatelessWidget {
   const SlidingContent({

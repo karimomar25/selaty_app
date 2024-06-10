@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:selaty_app/core/utils/styles.dart';
+import 'package:selaty_app/features/login_or_signup/presentation/LogIn/login_view.dart';
 import 'package:selaty_app/features/login_or_signup/presentation/Login_Or_Signup/widgets/login_or_signup_button.dart';
 import 'package:selaty_app/features/login_or_signup/presentation/SignUp/signup_view.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
@@ -41,7 +43,11 @@ class LoginOrSignUpView extends StatelessWidget {
               height: 24,
             ),
             LoginOrSignUpCustomButton(
-                onTap: () {}, text: "تسجيل الدخول", color: Colors.red),
+                onTap: () {
+                  Get.to(const LoginView());
+                },
+                text: "تسجيل الدخول",
+                color: Colors.red),
             const SizedBox(
               height: 16,
             ),

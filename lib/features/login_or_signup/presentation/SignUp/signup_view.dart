@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:selaty_app/core/utils/styles.dart';
+import 'package:selaty_app/features/login_or_signup/presentation/LogIn/login_view.dart';
+import 'package:selaty_app/features/login_or_signup/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
 import 'package:selaty_app/features/login_or_signup/presentation/SignUp/widgets/custom_button.dart';
 import 'package:selaty_app/features/login_or_signup/presentation/SignUp/widgets/custom_form.dart';
 import 'package:selaty_app/features/login_or_signup/presentation/SignUp/widgets/social_media_button.dart';
@@ -21,8 +24,8 @@ class SignupView extends StatelessWidget {
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.camera_alt_outlined),
                   Icon(Icons.arrow_back_ios),
+                  Icon(Icons.camera_alt_outlined),
                 ],
               ),
               SizedBox(
@@ -114,26 +117,14 @@ class SignupView extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Row(
-                      children: [
-                        Text("تسجيل الدخول"),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Icon(
-                          FontAwesomeIcons.youtube,
-                          color: Colors.blue,
-                          size: 15,
-                        )
-                      ],
-                    ),
-                  ),
-                  Text("لديك حستب بالفعل؟"),
-                ],
+              GestureDetector(
+                onTap: () {
+                  Get.to(const LoginView());
+                },
+                child: const CustomBottomRow(
+                  text: "لديك حساب بالفعل",
+                  text2: "تسجيل الدخول",
+                ),
               ),
             ],
           ),
