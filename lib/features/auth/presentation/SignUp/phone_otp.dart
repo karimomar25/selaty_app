@@ -10,7 +10,7 @@ class PhoneOtp extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffEEEEEE),
+        backgroundColor: const Color(0xffEEEEEE),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
