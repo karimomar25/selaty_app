@@ -11,124 +11,132 @@ class SignupView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 32,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(Icons.camera_alt_outlined),
-                Icon(Icons.arrow_back_ios),
-              ],
-            ),
-            const SizedBox(
-              height: 32,
-            ),
-            const Align(
-              alignment: Alignment.topRight,
-              child: const Text(
-                "انشاء حساب جديد",
-                style: Styles.TextStyle30Bold,
-                textDirection: TextDirection.rtl,
+    return SafeArea(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Column(
+            children: [
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.camera_alt_outlined),
+                  Icon(Icons.arrow_back_ios),
+                ],
               ),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            Align(
-              alignment: Alignment.topRight,
-              child: Text(
-                "أدخل بياناتك لادخال حساب جديد",
-                style: Styles.TextStyle14.copyWith(color: Colors.grey),
+              SizedBox(
+                height: 12.h,
               ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            const CustomForm(
-              text: "الاسم",
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            const CustomForm(
-              text: "عنوان البريد الالكتروني",
-              icon: Icon(
-                Icons.add_task_sharp,
-                color: Colors.green,
+              const Align(
+                alignment: Alignment.topRight,
+                child: Text(
+                  "انشاء حساب جديد",
+                  style: Styles.TextStyle30Bold,
+                  textDirection: TextDirection.rtl,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            const CustomForm(
-              text: "كلمة المرور",
-              icon: Icon(Icons.visibility),
-            ),
-            const SizedBox(
-              height: 22,
-            ),
-            CustomButton(text: "اشتراك", color: Colors.green, onTap: () {}),
-            const SizedBox(
-              height: 38,
-            ),
-            const Text("او اشترك مع"),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  child: SocialMediaButton(
-                      icon: FontAwesomeIcons.googlePlusG,
-                      // iconSize: 25,
-                      borderColor: Colors.red,
-                      iconColor: Colors.red,
-                      text: "Google",
-                      texrColor: Colors.red,
-                      onTap: () {}),
+              const SizedBox(
+                height: 8,
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Text(
+                  "أدخل بياناتك لادخال حساب جديد",
+                  style: Styles.TextStyle14.copyWith(color: Colors.grey),
                 ),
-                SizedBox(
-                  width: 10.w,
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+              const CustomForm(
+                text: "الاسم",
+              ),
+              SizedBox(
+                height: 8.h,
+              ),
+              const CustomForm(
+                text: "عنوان البريد الالكتروني",
+                icon: Icon(
+                  Icons.add_task_sharp,
+                  color: Colors.green,
                 ),
-                SizedBox(
-                  child: SocialMediaButton(
-                      icon: Icons.facebook,
-                      borderColor: Colors.blue.shade900,
-                      text: "Facebook",
-                      texrColor: Colors.blue.shade900,
-                      onTap: () {}),
-                ),
-              ],
-            ),
-            const Spacer(),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
+              ),
+              SizedBox(
+                height: 8.h,
+              ),
+              const CustomForm(
+                text: "كلمة المرور",
+                icon: Icon(Icons.visibility),
+              ),
+              SizedBox(
+                height: 22.h,
+              ),
+              CustomButton(text: "اشتراك", color: Colors.green, onTap: () {}),
+              const SizedBox(
+                height: 25,
+              ),
+              const Text("او اشترك مع"),
+              const SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("تسجيل الدخول"),
-                    SizedBox(
-                      width: 5,
+                    Expanded(
+                      flex: 20,
+                      child: SizedBox(
+                        child: SocialMediaButton(
+                            icon: FontAwesomeIcons.googlePlusG,
+                            // iconSize: 25,
+                            borderColor: Colors.red,
+                            iconColor: Colors.red,
+                            text: "Google",
+                            texrColor: Colors.red,
+                            onTap: () {}),
+                      ),
                     ),
-                    Icon(
-                      FontAwesomeIcons.youtube,
-                      color: Colors.blue,
-                      size: 15,
-                    )
+                    const Spacer(),
+                    Expanded(
+                      flex: 20,
+                      child: SizedBox(
+                        child: SocialMediaButton(
+                            icon: Icons.facebook,
+                            borderColor: Colors.blue.shade900,
+                            text: "Facebook",
+                            texrColor: Colors.blue.shade900,
+                            onTap: () {}),
+                      ),
+                    ),
                   ],
                 ),
-                Text("لديك حستب بالفعل؟"),
-              ],
-            ),
-          ],
+              ),
+              const Spacer(),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Text("تسجيل الدخول"),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Icon(
+                          FontAwesomeIcons.youtube,
+                          color: Colors.blue,
+                          size: 15,
+                        )
+                      ],
+                    ),
+                  ),
+                  Text("لديك حستب بالفعل؟"),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

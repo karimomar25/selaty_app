@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 
 class SocialMediaButton extends StatelessWidget {
@@ -26,7 +25,7 @@ class SocialMediaButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         alignment: Alignment.center,
         // height: 50.h,
         decoration: BoxDecoration(
@@ -42,7 +41,7 @@ class SocialMediaButton extends StatelessWidget {
               color: iconColor,
               size: iconSize,
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Text(
@@ -63,7 +62,7 @@ class GPlus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Text(
           "Google",

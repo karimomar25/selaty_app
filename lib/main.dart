@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/Login_Or_Signup/login_or_signup_view.dart';
-import 'package:selaty_app/features/login_or_signup/presentation/SignUp/signup_view.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:selaty_app/features/onboarding/onboarding_view.dart';
 
 void main() {
@@ -16,13 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       splitScreenMode: true,
-      child: MaterialApp(
+      child: GetMaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             // Define the default font family for the entire app
             fontFamily: 'Cairo',
           ),
-          home: const SignupView()),
+          home: const OnboardingView()),
     );
   }
 }

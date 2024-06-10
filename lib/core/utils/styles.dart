@@ -28,6 +28,7 @@ abstract class Styles {
     fontSize: 30,
     fontWeight: FontWeight.bold,
   );
+  // ignore: constant_identifier_names
   static const TextStyle16Bold = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.bold,
