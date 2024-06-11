@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/core/utils/styles.dart';
+import 'package:selaty_app/features/Home/presentation/home_view.dart';
 import 'package:selaty_app/features/auth/presentation/LogIn/reset_password.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/signup_view.dart';
@@ -90,9 +91,14 @@ class LoginView extends StatelessWidget {
               SizedBox(
                 height: 22.h,
               ),
-              const CustomButton(
-                text: "تسجيل الدخول",
-                color: Colors.green,
+              GestureDetector(
+                onTap: () {
+                  Get.to(const HomeView());
+                },
+                child: const CustomButton(
+                  text: "تسجيل الدخول",
+                  color: Colors.green,
+                ),
               ),
               const Spacer(
                 flex: 2,

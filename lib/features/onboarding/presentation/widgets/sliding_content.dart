@@ -15,6 +15,9 @@ class SlidingContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return PageView.builder(
       //pass the pageController to slide by button >> controller: controller.pageController,
       onPageChanged: (value) {
@@ -29,9 +32,35 @@ class SlidingContent extends StatelessWidget {
               const Spacer(
                 flex: 2,
               ),
-              Image.asset(
-                onBoardingList[index].image,
-                height: 100,
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        color: onBoardingList[index].titleColor.withOpacity(.2),
+                        shape: BoxShape.circle),
+                    height: height / 3,
+                    width: width / 1.7,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: onBoardingList[index].titleColor.withOpacity(.4),
+                        shape: BoxShape.circle),
+                    height: height / 4.5,
+                    width: width / 2,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: onBoardingList[index].titleColor,
+                        shape: BoxShape.circle),
+                    height: height / 5.5,
+                    width: width / 2.7,
+                  ),
+                  Image.asset(
+                    onBoardingList[index].image,
+                    height: height / 9,
+                  ),
+                ],
               ),
               const Spacer(
                 flex: 1,

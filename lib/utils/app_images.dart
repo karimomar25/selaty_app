@@ -1,6 +1,6 @@
 class Assets {
   Assets._();
-
+  
   /// Assets for imagesAnanaas
   /// assets/images/ananaas.jpg
   static const String imagesAnanaas = "assets/images/ananaas.jpg";
@@ -39,14 +39,14 @@ class Assets {
 
   /// Assets for imagesSplashBackground
   /// assets/images/splash_background.jpg
-  static const String imagesSplashBackground =
-      "assets/images/splash_background.jpg";
+  static const String imagesSplashBackground = "assets/images/splash_background.jpg";
 
   /// Assets for imagesVan
-  /// assets/images/van.jpg
+  /// assets/images/van.png
   static const String imagesVan = "assets/images/van.png";
 
   /// Assets for imagesZz
   /// assets/images/zz.jpg
   static const String imagesZz = "assets/images/zz.jpg";
 }
+
