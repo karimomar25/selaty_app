@@ -9,9 +9,11 @@ class DescountsItemGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 270,
+        height: height / 2.8,
         child: GridView.builder(
           itemCount: 6,
           physics: const NeverScrollableScrollPhysics(),

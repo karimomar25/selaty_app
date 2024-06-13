@@ -6,6 +6,7 @@ class BestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(boxShadow: const [
         BoxShadow(color: Colors.grey, blurStyle: BlurStyle.solid, blurRadius: 4)
@@ -13,7 +14,7 @@ class BestSellerItem extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(
-            height: 8,
+            height: 7,
           ),
           Row(
             children: [
@@ -46,10 +47,10 @@ class BestSellerItem extends StatelessWidget {
           ),
           Image.asset(
             Assets.imagesSmallFruits,
-            height: 75,
+            height: height / 9.1,
           ),
-          const SizedBox(
-            height: 12,
+          const Spacer(
+            flex: 6,
           ),
           Align(
             alignment: Alignment.centerRight,
@@ -75,6 +76,7 @@ class BestSellerItem extends StatelessWidget {
               ),
             ),
           ),
+          const Spacer(),
           Container(
             decoration: BoxDecoration(
                 borderRadius:
@@ -99,7 +101,7 @@ class BestSellerItem extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

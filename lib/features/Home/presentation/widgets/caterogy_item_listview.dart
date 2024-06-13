@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/best_value_item.dart';
+import 'package:selaty_app/features/Home/presentation/widgets/caterogy_item.dart';
 
 class CaterogyItemListView extends StatelessWidget {
   const CaterogyItemListView({
@@ -8,10 +8,10 @@ class CaterogyItemListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return SliverToBoxAdapter(
         child: SizedBox(
-      width: 90,
-      height: 100,
+      height: height / 7.5,
       child: ListView.builder(
         reverse: true,
         scrollDirection: Axis.horizontal,

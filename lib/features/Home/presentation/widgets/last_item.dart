@@ -6,6 +6,8 @@ class LastItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+
     return Container(
       decoration: BoxDecoration(boxShadow: const [
         BoxShadow(color: Colors.grey, blurStyle: BlurStyle.solid, blurRadius: 4)
@@ -31,13 +33,15 @@ class LastItem extends StatelessWidget {
               ),
             ),
           ),
+          const Spacer(),
           Image.asset(
             Assets.imagesSmallFruits,
-            height: 75,
+            height: height / 10.2,
           ),
           const SizedBox(
             height: 12,
           ),
+          const Spacer(),
           Stack(
             clipBehavior: Clip.none,
             children: [

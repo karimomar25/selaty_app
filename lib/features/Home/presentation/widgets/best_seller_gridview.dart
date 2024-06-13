@@ -8,12 +8,13 @@ class BestSellerGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 434,
+        height: height / 1.6,
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
+                childAspectRatio: 1.4, crossAxisCount: 2),
             reverse: true,
             scrollDirection: Axis.horizontal,
             itemCount: 15,

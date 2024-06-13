@@ -1,25 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 
-class BestValueItem extends StatelessWidget {
-  const BestValueItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
 class CaterogyItem extends StatelessWidget {
   const CaterogyItem({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return Stack(
       children: [
         Container(
           width: 90,
-          height: 100,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             color: Colors.white,
@@ -36,7 +29,7 @@ class CaterogyItem extends StatelessWidget {
           top: 60,
           child: Container(
             width: 90,
-            height: 100,
+            height: 80,
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover,

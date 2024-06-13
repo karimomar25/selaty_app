@@ -51,9 +51,10 @@ class _FruitsImageListViewState extends State<FruitsImageListView> {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 110,
+        height: height / 7.5,
         child: ListView.builder(
           controller: _scrollController,
           scrollDirection: Axis.horizontal,

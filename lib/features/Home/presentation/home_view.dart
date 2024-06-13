@@ -14,7 +14,9 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: Colors.grey.shade300,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: CustomScrollView(
@@ -76,7 +78,7 @@ class HomeView extends StatelessWidget {
             const BestSellerGridView(),
             SliverToBoxAdapter(
               child: Container(
-                height: MediaQuery.of(context).size.width * .4,
+                height: height / 5,
                 decoration: BoxDecoration(
                   image: const DecorationImage(
                       fit: BoxFit.cover,

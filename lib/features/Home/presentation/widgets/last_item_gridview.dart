@@ -8,12 +8,14 @@ class LastItemGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 175,
+        height: height / 3.5,
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 1),
+                childAspectRatio: 1.4, crossAxisCount: 1),
             reverse: true,
             scrollDirection: Axis.horizontal,
             itemCount: 15,

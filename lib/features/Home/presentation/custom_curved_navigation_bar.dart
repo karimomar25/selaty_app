@@ -50,14 +50,13 @@ class _CustomCurvedNavigationBarState extends State<CustomCurvedNavigationBar> {
               onTap: (index) {
                 setState(() {
                   this.index = index;
-                  print(index);
                 });
               },
               key: navigationKey,
               animationDuration: const Duration(milliseconds: 250),
               color: Colors.orange,
               buttonBackgroundColor: Colors.orange,
-              backgroundColor: Colors.white,
+              backgroundColor: Colors.transparent,
               height: 55,
               items: items),
         ),
