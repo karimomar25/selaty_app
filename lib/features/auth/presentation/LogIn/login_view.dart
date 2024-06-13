@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/core/utils/styles.dart';
-import 'package:selaty_app/features/Home/presentation/home_view.dart';
+import 'package:selaty_app/features/Home/presentation/custom_curved_navigation_bar.dart';
 import 'package:selaty_app/features/auth/presentation/LogIn/reset_password.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/login_or_signup_view.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
@@ -95,7 +94,7 @@ class LoginView extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Go.toRemoveAll(const HomeView());
+                  Go.toRemoveAll(const CustomCurvedNavigationBar());
                 },
                 child: const CustomButton(
                   text: "تسجيل الدخول",

@@ -10,10 +10,10 @@ class LastItemGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 350,
+        height: 175,
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
+                crossAxisCount: 1),
             reverse: true,
             scrollDirection: Axis.horizontal,
             itemCount: 15,

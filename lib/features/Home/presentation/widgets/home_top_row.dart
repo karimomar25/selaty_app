@@ -4,6 +4,7 @@ import 'package:selaty_app/core/utils/styles.dart';
 class HomeTopRow extends StatelessWidget {
   const HomeTopRow({super.key, this.onPressed});
   final void Function()? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -39,8 +40,11 @@ class HomeTopRow extends StatelessWidget {
             )
           ],
         ),
-        const CircleAvatar(
-          backgroundColor: Colors.yellow,
+        GestureDetector(
+          onTap: onPressed,
+          child: const CircleAvatar(
+            backgroundColor: Colors.yellow,
+          ),
         )
       ],
     );

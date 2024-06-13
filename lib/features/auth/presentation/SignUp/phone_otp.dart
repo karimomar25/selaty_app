@@ -3,7 +3,6 @@ import 'package:pinput/pinput.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/phone_auth.dart';
-import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_top_row.dart';
 import 'package:short_navigation/short_navigation.dart';
 
 class PhoneOtp extends StatelessWidget {

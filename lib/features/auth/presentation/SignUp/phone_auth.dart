@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/phone_otp.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/signup_view.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
-import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_top_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/phone_number_form.dart';
 import 'package:short_navigation/short_navigation.dart';
 

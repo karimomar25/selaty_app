@@ -15,7 +15,8 @@ class CustomAuthTopRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-            onPressed: onPressedBackArrow, icon: Icon(Icons.arrow_back_ios)),
+            onPressed: onPressedBackArrow,
+            icon: const Icon(Icons.arrow_back_ios)),
         Text(
           text,
           style: Styles.TextStyle18,
