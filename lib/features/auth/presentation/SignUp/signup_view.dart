@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 import 'package:selaty_app/features/auth/presentation/LogIn/login_view.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/login_or_signup_view.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/phone_auth.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_form.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/social_media_button.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class SignupView extends StatelessWidget {
   const SignupView({super.key});
@@ -22,12 +24,11 @@ class SignupView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Column(
             children: [
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(Icons.arrow_back_ios),
-                  Icon(Icons.camera_alt_outlined),
-                ],
+              CustomAuthTopRow(
+                text: "",
+                onPressedBackArrow: () {
+                  Go.backAndto(const LoginOrSignUpView());
+                },
               ),
               SizedBox(
                 height: 12.h,
@@ -78,7 +79,7 @@ class SignupView extends StatelessWidget {
               ),
               GestureDetector(
                   onTap: () {
-                    Get.to(const PhoneAuth());
+                    Go.toReplace(const PhoneAuth());
                   },
                   child: const CustomButton(
                     text: "اشتراك",
@@ -127,7 +128,7 @@ class SignupView extends StatelessWidget {
               const Spacer(),
               GestureDetector(
                 onTap: () {
-                  Get.to(const LoginView());
+                  Go.to(const LoginView());
                 },
                 child: const CustomBottomRow(
                   text: "لديك حساب بالفعل",

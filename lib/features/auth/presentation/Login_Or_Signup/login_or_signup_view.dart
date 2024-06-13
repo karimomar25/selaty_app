@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 import 'package:selaty_app/features/auth/presentation/LogIn/login_view.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/login_or_signup_button.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/signup_view.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class LoginOrSignUpView extends StatelessWidget {
   const LoginOrSignUpView({super.key});
@@ -44,7 +44,7 @@ class LoginOrSignUpView extends StatelessWidget {
             ),
             LoginOrSignUpCustomButton(
                 onTap: () {
-                  Get.to(const LoginView());
+                  Go.toReplace(const LoginView());
                 },
                 text: "تسجيل الدخول",
                 color: Colors.red),
@@ -53,9 +53,7 @@ class LoginOrSignUpView extends StatelessWidget {
             ),
             LoginOrSignUpCustomButton(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const SignupView(),
-                  ));
+                  Go.toReplace(const SignupView());
                 },
                 text: "انشئ حساب",
                 color: Colors.green),

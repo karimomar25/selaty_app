@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/phone_otp.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/signup_view.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_top_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/phone_number_form.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class PhoneAuth extends StatelessWidget {
   const PhoneAuth({super.key});
@@ -17,7 +20,11 @@ class PhoneAuth extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const CustomTopRow(text: "تحقق من رقم الهاتف"),
+              CustomAuthTopRow(
+                  onPressedBackArrow: () {
+                    Go.backAndto(const SignupView());
+                  },
+                  text: "تحقق من رقم الهاتف"),
               const SizedBox(
                 height: 32,
               ),
@@ -35,7 +42,7 @@ class PhoneAuth extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(const PhoneOtp());
+                  Go.toReplace(const PhoneOtp());
                 },
                 child: const CustomButton(
                   text: "تأكيد",

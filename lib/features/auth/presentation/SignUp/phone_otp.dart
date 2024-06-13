@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 import 'package:selaty_app/core/utils/styles.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
+import 'package:selaty_app/features/auth/presentation/SignUp/phone_auth.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_top_row.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class PhoneOtp extends StatelessWidget {
   const PhoneOtp({super.key});
@@ -15,7 +18,11 @@ class PhoneOtp extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const CustomTopRow(text: "التحقق من الهاتف"),
+              CustomAuthTopRow(
+                  onPressedBackArrow: () {
+                    Go.backAndto(const PhoneAuth());
+                  },
+                  text: "التحقق من الهاتف"),
               const SizedBox(
                 height: 28,
               ),

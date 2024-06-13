@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/styles.dart';
+import 'package:selaty_app/features/auth/presentation/LogIn/login_view.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_form.dart';
-import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_top_row.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class ResetPassword extends StatelessWidget {
   const ResetPassword({super.key});
@@ -15,7 +17,11 @@ class ResetPassword extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const CustomTopRow(text: "تغيير كلمة المرور"),
+              CustomAuthTopRow(
+                  onPressedBackArrow: () {
+                    Go.to(const LoginView());
+                  },
+                  text: "تغيير كلمة المرور"),
               const SizedBox(
                 height: 32,
               ),

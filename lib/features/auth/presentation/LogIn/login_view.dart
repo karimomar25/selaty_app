@@ -5,10 +5,13 @@ import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 import 'package:selaty_app/features/Home/presentation/home_view.dart';
 import 'package:selaty_app/features/auth/presentation/LogIn/reset_password.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/login_or_signup_view.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
+import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/signup_view.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_form.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -22,12 +25,11 @@ class LoginView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Column(
             children: [
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(Icons.arrow_back_ios),
-                  Icon(Icons.camera_alt_outlined),
-                ],
+              CustomAuthTopRow(
+                text: "",
+                onPressedBackArrow: () {
+                  Go.backAndto(const LoginOrSignUpView());
+                },
               ),
               const Spacer(),
               Row(
@@ -84,7 +86,7 @@ class LoginView extends StatelessWidget {
                     style: Styles.TextStyle16.copyWith(color: Colors.black),
                   ),
                   onPressed: () {
-                    Get.to(const ResetPassword());
+                    Go.to(const ResetPassword());
                   },
                 ),
               ),
@@ -93,7 +95,7 @@ class LoginView extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Get.to(const HomeView());
+                  Go.toRemoveAll(const HomeView());
                 },
                 child: const CustomButton(
                   text: "تسجيل الدخول",
@@ -105,7 +107,7 @@ class LoginView extends StatelessWidget {
               ),
               GestureDetector(
                   onTap: () {
-                    Get.to(const SignupView());
+                    Go.to(const SignupView());
                   },
                   child: const CustomBottomRow(
                       text: "ليس لديك حساب؟", text2: "أنشئ حساب"))
