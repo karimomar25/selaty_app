@@ -13,7 +13,7 @@ class BestSellerGridView extends StatelessWidget {
   final double? childAspectRatio;
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
+    // double height = MediaQuery.of(context).size.height;
     return SizedBox(
       height: gridHeight,
       child: GridView.builder(

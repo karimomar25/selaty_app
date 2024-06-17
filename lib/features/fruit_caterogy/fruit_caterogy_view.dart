@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
+import 'package:selaty_app/features/fruit_caterogy/widgets/circle_ananas_item.dart';
 import 'package:selaty_app/features/fruit_caterogy/widgets/fruit_view_top_row.dart';
 import 'package:selaty_app/features/home/presentation/widgets/best_seller_gridview.dart';
 import 'package:selaty_app/features/home/presentation/widgets/search_bar.dart';
@@ -84,31 +85,6 @@ class FruitCaterogyView extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class CircleAnanasItem extends StatelessWidget {
-  const CircleAnanasItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        CircleAvatar(
-          backgroundColor: Colors.green.shade100,
-          maxRadius: 45,
-        ),
-        const Positioned(
-          top: 10,
-          left: 9,
-          child: CircleAvatar(
-            backgroundColor: Colors.white,
-            maxRadius: 35,
-            backgroundImage: AssetImage(Assets.imagesAnanaas),
-          ),
-        )
-      ],
     );
   }
 }
