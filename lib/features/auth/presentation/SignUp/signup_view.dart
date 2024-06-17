@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:selaty_app/core/utils/styles.dart';
-import 'package:selaty_app/features/auth/presentation/LogIn/login_view.dart';
-import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/login_or_signup_view.dart';
-import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
-import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
-import 'package:selaty_app/features/auth/presentation/SignUp/phone_auth.dart';
-import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
-import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_form.dart';
-import 'package:selaty_app/features/auth/presentation/SignUp/widgets/social_media_button.dart';
+import 'package:selaty_app/features/auth/presentation/login/login_view.dart';
+import 'package:selaty_app/features/auth/presentation/login_or_signup/login_or_signup_view.dart';
+import 'package:selaty_app/features/auth/presentation/login_or_signup/widgets/custom_bottom_row.dart';
+import 'package:selaty_app/features/auth/presentation/login_or_signup/widgets/custom_auth_top_row.dart';
+import 'package:selaty_app/features/auth/presentation/signup/phone_auth.dart';
+import 'package:selaty_app/features/auth/presentation/signup/widgets/custom_button.dart';
+import 'package:selaty_app/features/auth/presentation/signup/widgets/custom_form.dart';
+import 'package:selaty_app/features/auth/presentation/signup/widgets/social_media_button.dart';
 import 'package:short_navigation/short_navigation.dart';
 
 class SignupView extends StatelessWidget {
@@ -25,6 +25,7 @@ class SignupView extends StatelessWidget {
           child: Column(
             children: [
               CustomTopRow(
+                color: Colors.black,
                 text: "",
                 onPressedBackArrow: () {
                   Go.backAndto(const LoginOrSignUpView());

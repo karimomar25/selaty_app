@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/styles.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/show_all_button.dart';
+import 'package:selaty_app/features/home/presentation/widgets/show_all_button.dart';
 
 class DescrebtionRow extends StatelessWidget {
   const DescrebtionRow(

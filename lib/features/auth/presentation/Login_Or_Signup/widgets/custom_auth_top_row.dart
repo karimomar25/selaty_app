@@ -6,8 +6,10 @@ class CustomTopRow extends StatelessWidget {
     super.key,
     this.onPressedBackArrow,
     required this.text,
+    required this.color,
   });
   final String text;
+  final Color color;
   final void Function()? onPressedBackArrow;
   @override
   Widget build(BuildContext context) {
@@ -16,12 +18,12 @@ class CustomTopRow extends StatelessWidget {
       children: [
         IconButton(
             onPressed: onPressedBackArrow,
-            icon: const Icon(Icons.arrow_back_ios)),
-        Text(
-          text,
-          style: Styles.TextStyle18,
-        ),
-        const Icon(Icons.camera_alt_outlined),
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: color,
+            )),
+        Text(text, style: Styles.TextStyle18.copyWith(color: color)),
+        Icon(Icons.camera_alt_outlined, color: color),
       ],
     );
   }

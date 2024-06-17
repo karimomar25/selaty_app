@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/caterogy_item.dart';
+import 'package:selaty_app/features/home/presentation/widgets/caterogy_item.dart';
 
 class CaterogyItemListView extends StatelessWidget {
   const CaterogyItemListView({

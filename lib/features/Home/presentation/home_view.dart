@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/best_seller_gridview.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/caterogy_item_listview.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/descounts_item_gridview.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/descrebtion_row.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/fruits_image_listview.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/home_top_row.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/last_item_gridview.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/search_bar.dart';
+import 'package:selaty_app/features/home/presentation/widgets/best_seller_gridview.dart';
+import 'package:selaty_app/features/home/presentation/widgets/caterogy_item_listview.dart';
+import 'package:selaty_app/features/home/presentation/widgets/descounts_item_gridview.dart';
+import 'package:selaty_app/features/home/presentation/widgets/descrebtion_row.dart';
+import 'package:selaty_app/features/home/presentation/widgets/fruits_image_listview.dart';
+import 'package:selaty_app/features/home/presentation/widgets/home_top_row.dart';
+import 'package:selaty_app/features/home/presentation/widgets/last_item_gridview.dart';
+import 'package:selaty_app/features/home/presentation/widgets/search_bar.dart';
 import 'package:selaty_app/features/caterogy/caterogy_view.dart';
 import 'package:short_navigation/short_navigation.dart';
 
@@ -77,14 +77,19 @@ class HomeView extends StatelessWidget {
               ),
             ),
             CaterogyItemListView(
-              height: MediaQuery.of(context).size.height / 6,
+              height: MediaQuery.of(context).size.height / 6.2,
               itemCount: 15,
               scrollDirection: Axis.horizontal,
             ),
             const SliverToBoxAdapter(
               child: DescrebtionRow(text2: "", text: "الاكثر مبيعا"),
             ),
-            const BestSellerGridView(),
+            SliverToBoxAdapter(
+                child: BestSellerGridView(
+              childAspectRatio: 1.4,
+              gridHeight: height / 1.6,
+              scrollDirection: Axis.horizontal,
+            )),
             SliverToBoxAdapter(
               child: Container(
                 height: height / 5,
@@ -120,7 +125,12 @@ class HomeView extends StatelessWidget {
                 height: 4,
               ),
             ),
-            const BestSellerGridView(),
+            SliverToBoxAdapter(
+                child: BestSellerGridView(
+              childAspectRatio: 1.4,
+              gridHeight: height / 1.6,
+              scrollDirection: Axis.horizontal,
+            )),
             const SliverToBoxAdapter(
               child: SizedBox(
                 height: 8,

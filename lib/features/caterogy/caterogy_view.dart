@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:selaty_app/core/utils/app_images.dart';
-import 'package:selaty_app/features/Home/presentation/custom_curved_navigation_bar.dart';
+import 'package:selaty_app/features/home/presentation/custom_curved_navigation_bar.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
 import 'package:selaty_app/features/caterogy/widgets/caterogy_grid_view.dart';
 import 'package:short_navigation/short_navigation.dart';
@@ -18,6 +17,7 @@ class CaterogyView extends StatelessWidget {
           child: Column(
             children: [
               CustomTopRow(
+                color: Colors.black,
                 text: "التصنيفات",
                 onPressedBackArrow: () {
                   Go.backAndto(const CustomCurvedNavigationBar());

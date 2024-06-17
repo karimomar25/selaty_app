@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/core/utils/styles.dart';
-import 'package:selaty_app/features/Home/presentation/custom_curved_navigation_bar.dart';
-import 'package:selaty_app/features/auth/presentation/LogIn/reset_password.dart';
+import 'package:selaty_app/features/home/presentation/custom_curved_navigation_bar.dart';
+import 'package:selaty_app/features/auth/presentation/login/reset_password.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/login_or_signup_view.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_bottom_row.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
@@ -25,6 +25,7 @@ class LoginView extends StatelessWidget {
           child: Column(
             children: [
               CustomTopRow(
+                color: Colors.black,
                 text: "",
                 onPressedBackArrow: () {
                   Go.backAndto(const LoginOrSignUpView());

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/last_item.dart';
+import 'package:selaty_app/features/home/presentation/widgets/last_item.dart';
 
 class LastItemGridView extends StatelessWidget {
   const LastItemGridView({

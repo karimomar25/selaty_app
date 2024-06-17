@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/models/discounts_model.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/descounts_item.dart';
+import 'package:selaty_app/features/home/presentation/widgets/descounts_item.dart';
 
 class DescountsItemGridView extends StatelessWidget {
   const DescountsItemGridView({

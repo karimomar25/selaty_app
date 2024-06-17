@@ -1,6 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:selaty_app/features/Home/presentation/home_view.dart';
+import 'package:selaty_app/features/home/presentation/home_view.dart';
 import 'package:selaty_app/features/Profile/profile_view.dart';
 
 class CustomCurvedNavigationBar extends StatefulWidget {

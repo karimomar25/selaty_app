@@ -18,6 +18,7 @@ class PhoneOtp extends StatelessWidget {
           child: Column(
             children: [
               CustomTopRow(
+                  color: Colors.black,
                   onPressedBackArrow: () {
                     Go.backAndto(const PhoneAuth());
                   },

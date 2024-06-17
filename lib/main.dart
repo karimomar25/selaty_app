@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:selaty_app/features/onboarding/presentation/onboarding_view.dart';
+import 'package:selaty_app/features/fruit_caterogy/fruit_caterogy_view.dart';
+import 'package:selaty_app/features/home/presentation/home_view.dart';
 import 'package:short_navigation/short_navigation.dart';
 
 void main() {
@@ -10,7 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -19,10 +19,9 @@ class MyApp extends StatelessWidget {
           navigatorKey: Go.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            // Define the default font family for the entire app
             fontFamily: 'Cairo',
           ),
-          home: const OnboardingView()),
+          home: const FruitCaterogyView()),
     );
   }
 }
