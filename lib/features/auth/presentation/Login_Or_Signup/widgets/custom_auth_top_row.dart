@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 
-class CustomAuthTopRow extends StatelessWidget {
-  const CustomAuthTopRow({
+class CustomTopRow extends StatelessWidget {
+  const CustomTopRow({
     super.key,
     this.onPressedBackArrow,
     required this.text,

@@ -17,7 +17,7 @@ class ResetPassword extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              CustomAuthTopRow(
+              CustomTopRow(
                   onPressedBackArrow: () {
                     Go.to(const LoginView());
                   },

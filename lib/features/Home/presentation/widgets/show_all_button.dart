@@ -9,6 +9,6 @@ class ShowAllButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(onPressed: () {}, child: const Text("مشاهدة الكل"));
+    return TextButton(onPressed: onPressed, child: const Text("مشاهدة الكل"));
   }
 }

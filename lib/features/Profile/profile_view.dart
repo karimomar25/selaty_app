@@ -31,43 +31,46 @@ class ProfileView extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.orange),
+                        child: const Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Spacer(
+                              flex: 8,
+                            ),
+                            Text(
+                              textAlign: TextAlign.center,
+                              "كريم الكامبيون",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 17),
+                            ),
+                            Text(
+                              "okareem250@gmail.com",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 17),
+                            ),
+                            Spacer(),
+                          ],
+                        ),
                       ),
                       Positioned(
                         left: width / 3.8,
                         bottom: height / 14,
-                        child: const CircleAvatar(
+                        child: CircleAvatar(
                           backgroundColor: Colors.white24,
-                          maxRadius: 60,
+                          maxRadius: width / 7,
                         ),
                       ),
                       Positioned(
-                        left: width / 3.5,
+                        left: width / 3.4,
                         bottom: height / 12,
-                        child: const CircleAvatar(
-                          backgroundImage: AssetImage(Assets.imagesMe),
-                          maxRadius: 50,
+                        child: CircleAvatar(
+                          backgroundImage: const AssetImage(Assets.imagesMe),
+                          maxRadius: width / 9,
                           backgroundColor: Colors.amber,
                         ),
                       ),
-                      Positioned(
-                        right: width / 3.5,
-                        top: height / 14,
-                        child: const Text(
-                          "كريم الكامبيون",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 18),
-                        ),
-                      ),
-                      Positioned(
-                        right: width / 5.5,
-                        top: height / 10,
-                        child: const Text(
-                          "okareem250@gmail.com",
-                          style: TextStyle(color: Colors.white, fontSize: 18),
-                        ),
-                      )
                     ],
                   ),
                   const Spacer(),

@@ -24,7 +24,7 @@ class LoginView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Column(
             children: [
-              CustomAuthTopRow(
+              CustomTopRow(
                 text: "",
                 onPressedBackArrow: () {
                   Go.backAndto(const LoginOrSignUpView());

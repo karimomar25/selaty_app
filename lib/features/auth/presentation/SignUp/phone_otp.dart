@@ -17,7 +17,7 @@ class PhoneOtp extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              CustomAuthTopRow(
+              CustomTopRow(
                   onPressedBackArrow: () {
                     Go.backAndto(const PhoneAuth());
                   },

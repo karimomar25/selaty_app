@@ -8,6 +8,8 @@ import 'package:selaty_app/features/Home/presentation/widgets/fruits_image_listv
 import 'package:selaty_app/features/Home/presentation/widgets/home_top_row.dart';
 import 'package:selaty_app/features/Home/presentation/widgets/last_item_gridview.dart';
 import 'package:selaty_app/features/Home/presentation/widgets/search_bar.dart';
+import 'package:selaty_app/features/caterogy/caterogy_view.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -65,13 +67,20 @@ class HomeView extends StatelessWidget {
               ),
             ),
             const FruitsImageListView(),
-            const SliverToBoxAdapter(
+            SliverToBoxAdapter(
               child: DescrebtionRow(
+                onPressed: () {
+                  Go.to(const CaterogyView());
+                },
                 text: "التصنيفات",
                 text2: "",
               ),
             ),
-            const CaterogyItemListView(),
+            CaterogyItemListView(
+              height: MediaQuery.of(context).size.height / 6,
+              itemCount: 15,
+              scrollDirection: Axis.horizontal,
+            ),
             const SliverToBoxAdapter(
               child: DescrebtionRow(text2: "", text: "الاكثر مبيعا"),
             ),
