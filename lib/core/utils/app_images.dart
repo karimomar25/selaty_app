@@ -31,7 +31,7 @@ class Assets {
 
   /// Assets for imagesShoppingBag
   /// assets/images/shopping_bag.jpg
-  static const String imagesShoppingBag = "assets/images/shopping_bag.jpg";
+  static const String imagesShoppingBag = "assets/images/shopping_bag.png";
 
   /// Assets for imagesSmallFruits
   /// assets/images/small_fruits.jpg

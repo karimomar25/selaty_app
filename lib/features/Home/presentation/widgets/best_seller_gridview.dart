@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:selaty_app/features/home/presentation/widgets/best_seller_item.dart';
 
 class BestSellerGridView extends StatelessWidget {
@@ -7,8 +8,10 @@ class BestSellerGridView extends StatelessWidget {
     this.scrollDirection,
     this.gridHeight,
     this.childAspectRatio,
+    this.onTap,
   });
   final Axis? scrollDirection;
+  final void Function()? onTap;
   final double? gridHeight;
   final double? childAspectRatio;
   @override
@@ -22,9 +25,10 @@ class BestSellerGridView extends StatelessWidget {
           reverse: true,
           scrollDirection: scrollDirection!,
           itemCount: 16,
-          itemBuilder: (context, index) => const Padding(
-                padding: EdgeInsets.only(left: 10, bottom: 10),
-                child: BestSellerItem(),
+          itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.only(left: 10, bottom: 10),
+                child: GestureDetector(
+                    onTap: onTap, child: const BestSellerItem()),
               )),
     );
   }

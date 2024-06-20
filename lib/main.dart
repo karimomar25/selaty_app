@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:selaty_app/features/fruit_caterogy/fruit_caterogy_view.dart';
+import 'package:selaty_app/features/cart/empty_cart_view.dart';
 import 'package:selaty_app/features/onboarding/presentation/onboarding_view.dart';
 import 'package:short_navigation/short_navigation.dart';
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: 'Cairo',
           ),
-          home: const OnboardingView()),
+          home: const EmptyCartView()),
     );
   }
 }

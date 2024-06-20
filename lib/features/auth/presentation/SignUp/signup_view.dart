@@ -83,6 +83,7 @@ class SignupView extends StatelessWidget {
                     Go.toReplace(const PhoneAuth());
                   },
                   child: const CustomButton(
+                    // width: double.infinity,
                     text: "اشتراك",
                     color: Colors.green,
                   )),

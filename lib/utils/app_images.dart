@@ -34,8 +34,8 @@ class Assets {
   static const String imagesShop = "assets/images/shop.png";
 
   /// Assets for imagesShoppingBag
-  /// assets/images/shopping_bag.jpg
-  static const String imagesShoppingBag = "assets/images/shopping_bag.jpg";
+  /// assets/images/shopping_bag.png
+  static const String imagesShoppingBag = "assets/images/shopping_bag.png";
 
   /// Assets for imagesSmallFruits
   /// assets/images/small_fruits.jpg

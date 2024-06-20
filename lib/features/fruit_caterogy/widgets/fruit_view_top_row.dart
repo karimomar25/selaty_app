@@ -7,8 +7,10 @@ class FruitViewTopRow extends StatelessWidget {
     this.onPressedBackArrow,
     required this.text,
     required this.color,
+    required this.textColor,
   });
   final String text;
+  final Color textColor;
   final Color color;
   final void Function()? onPressedBackArrow;
   @override
@@ -28,7 +30,7 @@ class FruitViewTopRow extends StatelessWidget {
                 color: color,
               )),
         ),
-        Text(text, style: Styles.TextStyle18.copyWith(color: Colors.white)),
+        Text(text, style: Styles.TextStyle18.copyWith(color: textColor)),
         Container(
             width: 36,
             height: 36,

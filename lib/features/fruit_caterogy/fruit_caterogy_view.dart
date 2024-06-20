@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:selaty_app/core/utils/app_images.dart';
+import 'package:selaty_app/features/cart/cart_view.dart';
 import 'package:selaty_app/features/fruit_caterogy/widgets/circle_ananas_item.dart';
 import 'package:selaty_app/features/fruit_caterogy/widgets/fruit_view_top_row.dart';
 import 'package:selaty_app/features/home/presentation/widgets/best_seller_gridview.dart';
 import 'package:selaty_app/features/home/presentation/widgets/search_bar.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class FruitCaterogyView extends StatelessWidget {
   const FruitCaterogyView({super.key});
@@ -34,6 +35,7 @@ class FruitCaterogyView extends StatelessWidget {
                   child: SizedBox(
                     width: width,
                     child: const FruitViewTopRow(
+                      textColor: Colors.white,
                       text: "الفاكهة",
                       color: Colors.black,
                     ),
@@ -75,6 +77,9 @@ class FruitCaterogyView extends StatelessWidget {
                     height: 16,
                   ),
                   BestSellerGridView(
+                    onTap: () {
+                      Go.to(const CartView());
+                    },
                     scrollDirection: Axis.vertical,
                     childAspectRatio: 0.8,
                     gridHeight: height / 1.8,
