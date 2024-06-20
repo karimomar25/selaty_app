@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: 'Cairo',
           ),
-          home: const EmptyCartView()),
+          home: const OnboardingView()),
     );
   }
 }

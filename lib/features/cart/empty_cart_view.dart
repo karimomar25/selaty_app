@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 import 'package:selaty_app/features/auth/presentation/signup/widgets/custom_button.dart';
+import 'package:selaty_app/features/cart/cart_view.dart';
+import 'package:selaty_app/features/caterogy/caterogy_view.dart';
+import 'package:selaty_app/features/fruit_caterogy/fruit_caterogy_view.dart';
 import 'package:selaty_app/features/fruit_caterogy/widgets/fruit_view_top_row.dart';
+import 'package:selaty_app/features/home/presentation/custom_curved_navigation_bar.dart';
+import 'package:short_navigation/short_navigation.dart';
 
 class EmptyCartView extends StatelessWidget {
   const EmptyCartView({super.key});
@@ -17,7 +22,10 @@ class EmptyCartView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
-              const FruitViewTopRow(
+              FruitViewTopRow(
+                  onPressedBackArrow: () {
+                    Go.backAndto(const CartView());
+                  },
                   text: "عربة التسوق",
                   color: Colors.black,
                   textColor: Colors.black),

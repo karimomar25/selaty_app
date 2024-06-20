@@ -3,6 +3,7 @@ import 'package:selaty_app/features/auth/presentation/signup/widgets/custom_butt
 import 'package:selaty_app/features/cart/empty_cart_view.dart';
 import 'package:selaty_app/features/cart/widgets/cart_item.dart';
 import 'package:selaty_app/features/cart/widgets/fees_item.dart';
+import 'package:selaty_app/features/fruit_caterogy/fruit_caterogy_view.dart';
 import 'package:selaty_app/features/fruit_caterogy/widgets/fruit_view_top_row.dart';
 import 'package:short_navigation/short_navigation.dart';
 
@@ -24,7 +25,10 @@ class _CartViewState extends State<CartView> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const FruitViewTopRow(
+              FruitViewTopRow(
+                  onPressedBackArrow: () {
+                    Go.backAndto(const FruitCaterogyView());
+                  },
                   textColor: Colors.black,
                   text: "عربة التسوق",
                   color: Colors.black),
