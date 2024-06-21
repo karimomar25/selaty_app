@@ -3,12 +3,12 @@ import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 import 'package:selaty_app/features/adresses_and_success/adresses_view.dart';
 import 'package:selaty_app/features/auth/presentation/signup/widgets/custom_button.dart';
-import 'package:selaty_app/features/cart/cart_view.dart';
 import 'package:selaty_app/features/fruit_caterogy/widgets/fruit_view_top_row.dart';
+import 'package:selaty_app/features/home/presentation/custom_curved_navigation_bar.dart';
 import 'package:short_navigation/short_navigation.dart';
 
-class EmptyCartView extends StatelessWidget {
-  const EmptyCartView({super.key});
+class SuccessView extends StatelessWidget {
+  const SuccessView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class EmptyCartView extends StatelessWidget {
             children: [
               FruitViewTopRow(
                   onPressedBackArrow: () {
-                    Go.backAndto(const CartView());
+                    Go.backAndto(const CustomCurvedNavigationBar());
                   },
                   text: "عربة التسوق",
                   color: Colors.black,
@@ -35,7 +35,7 @@ class EmptyCartView extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: Colors.white),
+                    color: const Color(0xff29C17B)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -43,13 +43,16 @@ class EmptyCartView extends StatelessWidget {
                       Assets.imagesShoppingBag,
                       height: 200,
                     ),
-                    const Text(
-                      "!عربة التسوق فارغة",
-                      style: Styles.TextStyle30Bold,
+                    Text(
+                      "! طلبك ناجح",
+                      style:
+                          Styles.TextStyle30Bold.copyWith(color: Colors.white),
                     ),
                     Text(
-                      "اجعل سلتك سعيدة واضف منتجات",
-                      style: Styles.TextStyle20.copyWith(color: Colors.grey),
+                      textAlign: TextAlign.center,
+                      textDirection: TextDirection.rtl,
+                      "شكرا علي الطلب ستحصل عليه خلال بضع دقائق",
+                      style: Styles.TextStyle20.copyWith(color: Colors.white),
                     ),
                     const SizedBox(
                       height: 200,
@@ -61,7 +64,7 @@ class EmptyCartView extends StatelessWidget {
                           Go.to(const AdressesView());
                         },
                         child: const CustomButton(
-                            text: "ابدأ التسوق", color: Colors.green),
+                            text: "ترتيب المسار", color: Color(0xff383248)),
                       ),
                     ),
                   ],
