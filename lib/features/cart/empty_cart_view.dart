@@ -22,7 +22,7 @@ class EmptyCartView extends StatelessWidget {
             children: [
               FruitViewTopRow(
                   onPressedBackArrow: () {
-                    Go.backAndto(const CartView());
+                    Go.backAndTo(const CartView());
                   },
                   text: "عربة التسوق",
                   color: Colors.black,

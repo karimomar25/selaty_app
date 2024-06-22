@@ -28,7 +28,7 @@ class _AdressesViewState extends State<AdressesView> {
             children: [
               FruitViewTopRow(
                   onPressedBackArrow: () {
-                    Go.backAndto(const EmptyCartView());
+                    Go.backAndTo(const EmptyCartView());
                   },
                   textColor: Colors.black,
                   text: "عنوان التسليم",

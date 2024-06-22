@@ -28,7 +28,7 @@ class SignupView extends StatelessWidget {
                 color: Colors.black,
                 text: "",
                 onPressedBackArrow: () {
-                  Go.backAndto(const LoginOrSignUpView());
+                  Go.backAndTo(const LoginOrSignUpView());
                 },
               ),
               SizedBox(

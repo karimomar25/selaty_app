@@ -20,7 +20,7 @@ class PhoneAuth extends StatelessWidget {
               CustomTopRow(
                   color: Colors.black,
                   onPressedBackArrow: () {
-                    Go.backAndto(const SignupView());
+                    Go.backAndTo(const SignupView());
                   },
                   text: "تحقق من رقم الهاتف"),
               const SizedBox(

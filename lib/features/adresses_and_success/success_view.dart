@@ -22,7 +22,7 @@ class SuccessView extends StatelessWidget {
             children: [
               FruitViewTopRow(
                   onPressedBackArrow: () {
-                    Go.backAndto(const CustomCurvedNavigationBar());
+                    Go.backAndTo(const CustomCurvedNavigationBar());
                   },
                   text: "عربة التسوق",
                   color: Colors.black,

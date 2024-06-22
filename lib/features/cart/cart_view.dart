@@ -27,7 +27,7 @@ class _CartViewState extends State<CartView> {
             children: [
               FruitViewTopRow(
                   onPressedBackArrow: () {
-                    Go.backAndto(const FruitCaterogyView());
+                    Go.backAndTo(const FruitCaterogyView());
                   },
                   textColor: Colors.black,
                   text: "عربة التسوق",

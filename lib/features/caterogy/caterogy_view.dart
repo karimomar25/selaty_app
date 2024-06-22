@@ -20,7 +20,7 @@ class CaterogyView extends StatelessWidget {
                 color: Colors.black,
                 text: "التصنيفات",
                 onPressedBackArrow: () {
-                  Go.backAndto(const CustomCurvedNavigationBar());
+                  Go.backAndTo(const CustomCurvedNavigationBar());
                 },
               ),
               const SizedBox(

@@ -20,7 +20,7 @@ class PhoneOtp extends StatelessWidget {
               CustomTopRow(
                   color: Colors.black,
                   onPressedBackArrow: () {
-                    Go.backAndto(const PhoneAuth());
+                    Go.backAndTo(const PhoneAuth());
                   },
                   text: "التحقق من الهاتف"),
               const SizedBox(

@@ -37,7 +37,7 @@ class FruitCaterogyView extends StatelessWidget {
                     width: width,
                     child: FruitViewTopRow(
                       onPressedBackArrow: () {
-                        Go.backAndto(const CaterogyView());
+                        Go.backAndTo(const CaterogyView());
                       },
                       textColor: Colors.white,
                       text: "الفاكهة",
