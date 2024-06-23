@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
+import 'package:selaty_app/core/utils/styles.dart';
 import 'package:selaty_app/features/home/presentation/widgets/best_seller_gridview.dart';
 import 'package:selaty_app/features/home/presentation/widgets/caterogy_item_listview.dart';
 import 'package:selaty_app/features/home/presentation/widgets/descounts_item_gridview.dart';
@@ -41,15 +42,140 @@ class HomeView extends StatelessWidget {
                   const SizedBox(
                     width: 10,
                   ),
-                  Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.red),
-                    child: const Icon(
-                      Icons.menu,
-                      color: Colors.white,
+                  GestureDetector(
+                    onTap: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return Container(
+                            height: 300,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8)),
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.search,
+                                        size: 50,
+                                      ),
+                                      Text(
+                                        "المنتجات",
+                                        style: Styles.TextStyle18.copyWith(
+                                            fontSize: 22),
+                                      ),
+                                      Spacer(),
+                                      Icon(Icons.close)
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 16,
+                                  ),
+                                  Container(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 16),
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                        color: Colors.orange,
+                                        borderRadius: BorderRadius.circular(8)),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.slow_motion_video),
+                                        const SizedBox(
+                                          width: 16,
+                                        ),
+                                        Text(
+                                          "فواكه",
+                                          style: Styles.TextStyle16Bold,
+                                        ),
+                                        Spacer(),
+                                        Icon(Icons.arrow_circle_right_outlined),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 16,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 35),
+                                    child: Container(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 16),
+                                      height: 40,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(8)),
+                                      child: Row(
+                                        children: [
+                                          Icon(Icons.slow_motion_video),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          Text(
+                                            "تفاح",
+                                            style: Styles.TextStyle16Bold,
+                                          ),
+                                          Spacer(),
+                                          Icon(Icons
+                                              .arrow_circle_right_outlined),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 35),
+                                    child: Container(
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 16),
+                                      height: 40,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey.shade200,
+                                          borderRadius:
+                                              BorderRadius.circular(8)),
+                                      child: Row(
+                                        children: [
+                                          Icon(Icons.slow_motion_video),
+                                          const SizedBox(
+                                            width: 16,
+                                          ),
+                                          Text(
+                                            "تفاح",
+                                            style: Styles.TextStyle16Bold,
+                                          ),
+                                          Spacer(),
+                                          Icon(Icons
+                                              .arrow_circle_right_outlined),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.red),
+                      child: const Icon(
+                        Icons.menu,
+                        color: Colors.white,
+                      ),
                     ),
                   )
                 ],

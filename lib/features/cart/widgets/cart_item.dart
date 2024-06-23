@@ -14,6 +14,10 @@ class _CartItemState extends State<CartItem> {
     fruitNumber++;
   }
 
+  fruitNumberDecreament() {
+    fruitNumber--;
+  }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -69,7 +73,13 @@ class _CartItemState extends State<CartItem> {
               const SizedBox(
                 height: 12,
               ),
-              const Text("-", style: TextStyle(fontSize: 20)),
+              GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      fruitNumberDecreament();
+                    });
+                  },
+                  child: const Text("-", style: TextStyle(fontSize: 20))),
             ],
           ),
         ],

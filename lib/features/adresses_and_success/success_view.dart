@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/core/utils/styles.dart';
-import 'package:selaty_app/features/adresses_and_success/adresses_view.dart';
 import 'package:selaty_app/features/auth/presentation/signup/widgets/custom_button.dart';
 import 'package:selaty_app/features/fruit_caterogy/widgets/fruit_view_top_row.dart';
 import 'package:selaty_app/features/home/presentation/custom_curved_navigation_bar.dart';
+import 'package:selaty_app/features/ordering/ordering_view.dart';
 import 'package:short_navigation/short_navigation.dart';
 
 class SuccessView extends StatelessWidget {
@@ -61,7 +61,7 @@ class SuccessView extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 38),
                       child: GestureDetector(
                         onTap: () {
-                          Go.to(const AdressesView());
+                          Go.to(const OrderingView());
                         },
                         child: const CustomButton(
                             text: "ترتيب المسار", color: Color(0xff383248)),
