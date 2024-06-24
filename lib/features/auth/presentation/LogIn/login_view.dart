@@ -20,99 +20,203 @@ class LoginView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12),
-          child: Column(
-            children: [
-              CustomTopRow(
-                color: Colors.black,
-                text: "",
-                onPressedBackArrow: () {
-                  Go.backAndTo(const LoginOrSignUpView());
-                },
-              ),
-              const Spacer(),
-              Row(
-                children: [
-                  const Spacer(),
-                  Image.asset(
-                    Assets.imagesBattikhaKart,
-                    height: 100,
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "سلـــــــــتي",
-                        style:
-                            Styles.TextStyle30Bold.copyWith(color: Colors.red),
+        body: OrientationBuilder(
+          builder: (context, orientation) {
+            if (orientation == Orientation.portrait) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Column(
+                  children: [
+                    CustomTopRow(
+                      color: Colors.black,
+                      text: "",
+                      onPressedBackArrow: () {
+                        Go.backAndTo(const LoginOrSignUpView());
+                      },
+                    ),
+                    const Spacer(),
+                    Row(
+                      children: [
+                        const Spacer(),
+                        Image.asset(
+                          Assets.imagesBattikhaKart,
+                          height: 100,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "سلـــــــــتي",
+                              style: Styles.TextStyle30Bold.copyWith(
+                                  color: Colors.red),
+                            ),
+                            const Text(
+                              "S    E    L    A    T    Y",
+                              style: Styles.TextStyle16Bold,
+                            ),
+                          ],
+                        ),
+                        const Spacer()
+                      ],
+                    ),
+                    SizedBox(
+                      height: 12.h,
+                    ),
+                    SizedBox(
+                      height: 8.h,
+                    ),
+                    const CustomForm(
+                      text: "عنوان البريد الالكتروني",
+                      icon: Icon(
+                        Icons.add_task_sharp,
+                        color: Colors.green,
                       ),
-                      const Text(
-                        "S    E    L    A    T    Y",
-                        style: Styles.TextStyle16Bold,
+                    ),
+                    SizedBox(
+                      height: 8.h,
+                    ),
+                    const CustomForm(
+                      text: "كلمة السر",
+                      icon: Icon(Icons.visibility),
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        child: Text(
+                          "هل نسيت كلمة السر",
+                          style:
+                              Styles.TextStyle16.copyWith(color: Colors.black),
+                        ),
+                        onPressed: () {
+                          Go.to(const ResetPassword());
+                        },
                       ),
-                    ],
-                  ),
-                  const Spacer()
-                ],
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              SizedBox(
-                height: 8.h,
-              ),
-              const CustomForm(
-                text: "عنوان البريد الالكتروني",
-                icon: Icon(
-                  Icons.add_task_sharp,
-                  color: Colors.green,
+                    ),
+                    SizedBox(
+                      height: 22.h,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Go.toRemoveAll(const CustomCurvedNavigationBar());
+                      },
+                      child: const CustomButton(
+                        text: "تسجيل الدخول",
+                        color: Colors.green,
+                      ),
+                    ),
+                    const Spacer(
+                      flex: 2,
+                    ),
+                    GestureDetector(
+                        onTap: () {
+                          Go.to(const SignupView());
+                        },
+                        child: const CustomBottomRow(
+                            text: "ليس لديك حساب؟", text2: "أنشئ حساب"))
+                  ],
                 ),
-              ),
-              SizedBox(
-                height: 8.h,
-              ),
-              const CustomForm(
-                text: "كلمة السر",
-                icon: Icon(Icons.visibility),
-              ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  child: Text(
-                    "هل نسيت كلمة السر",
-                    style: Styles.TextStyle16.copyWith(color: Colors.black),
-                  ),
-                  onPressed: () {
-                    Go.to(const ResetPassword());
-                  },
+              );
+            } else {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: ListView(
+                  children: [
+                    CustomTopRow(
+                      color: Colors.black,
+                      text: "",
+                      onPressedBackArrow: () {
+                        Go.backAndTo(const LoginOrSignUpView());
+                      },
+                    ),
+                    const Spacer(),
+                    Row(
+                      children: [
+                        const Spacer(),
+                        Image.asset(
+                          Assets.imagesBattikhaKart,
+                          height: 100,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "سلـــــــــتي",
+                              style: Styles.TextStyle30Bold.copyWith(
+                                  color: Colors.red),
+                            ),
+                            const Text(
+                              "S    E    L    A    T    Y",
+                              style: Styles.TextStyle16Bold,
+                            ),
+                          ],
+                        ),
+                        const Spacer()
+                      ],
+                    ),
+                    SizedBox(
+                      height: 12.h,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 100),
+                      child: Column(
+                        children: [
+                          const CustomForm(
+                            text: "عنوان البريد الالكتروني",
+                            icon: Icon(
+                              Icons.add_task_sharp,
+                              color: Colors.green,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 8.h,
+                          ),
+                          const CustomForm(
+                            text: "كلمة السر",
+                            icon: Icon(Icons.visibility),
+                          ),
+                          Align(
+                            alignment: Alignment.center,
+                            child: TextButton(
+                              child: Text(
+                                "هل نسيت كلمة السر؟",
+                                style: Styles.TextStyle16.copyWith(
+                                    color: Colors.black),
+                              ),
+                              onPressed: () {
+                                Go.to(const ResetPassword());
+                              },
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Go.toRemoveAll(const CustomCurvedNavigationBar());
+                            },
+                            child: const CustomButton(
+                              text: "تسجيل الدخول",
+                              color: Colors.green,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Spacer(
+                      flex: 2,
+                    ),
+                    GestureDetector(
+                        onTap: () {
+                          Go.to(const SignupView());
+                        },
+                        child: const CustomBottomRow(
+                            text: "ليس لديك حساب؟", text2: "أنشئ حساب"))
+                  ],
                 ),
-              ),
-              SizedBox(
-                height: 22.h,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Go.toRemoveAll(const CustomCurvedNavigationBar());
-                },
-                child: const CustomButton(
-                  text: "تسجيل الدخول",
-                  color: Colors.green,
-                ),
-              ),
-              const Spacer(
-                flex: 2,
-              ),
-              GestureDetector(
-                  onTap: () {
-                    Go.to(const SignupView());
-                  },
-                  child: const CustomBottomRow(
-                      text: "ليس لديك حساب؟", text2: "أنشئ حساب"))
-            ],
-          ),
+              );
+            }
+          },
         ),
       ),
     );

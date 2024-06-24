@@ -6,10 +6,12 @@ class LoginOrSignUpCustomButton extends StatelessWidget {
       {super.key,
       required this.text,
       required this.color,
-      required this.onTap});
+      required this.onTap,
+      this.width});
 
   final String text;
   final Color color;
+  final double? width;
   final void Function() onTap;
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class LoginOrSignUpCustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         alignment: Alignment.center,
-        width: double.infinity,
+        width: width ?? double.infinity,
         height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),

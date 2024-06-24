@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:selaty_app/features/Home/presentation/home_view.dart';
 import 'package:selaty_app/features/onboarding/presentation/onboarding_view.dart';
 import 'package:short_navigation/short_navigation.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: 'Cairo',
           ),
-          home: const OnboardingView()),
+          home: const HomeView()),
     );
   }
 }

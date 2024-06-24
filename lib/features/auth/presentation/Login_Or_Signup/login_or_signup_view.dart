@@ -11,55 +11,113 @@ class LoginOrSignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
+      body: OrientationBuilder(builder: (context, orientation) {
+        if (orientation == Orientation.portrait) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Spacer(),
-                Column(
+                Row(
                   children: [
-                    Text(
-                      "سلـــــــــتي",
-                      style: Styles.TextStyle30Bold.copyWith(color: Colors.red),
+                    const Spacer(),
+                    Column(
+                      children: [
+                        Text(
+                          "سلـــــــــتي",
+                          style: Styles.TextStyle30Bold.copyWith(
+                              color: Colors.red),
+                        ),
+                        const Text(
+                          "S  E  L  A  T  Y",
+                          style: Styles.TextStyle16Bold,
+                        ),
+                      ],
                     ),
-                    const Text(
-                      "S  E  L  A  T  Y",
-                      style: Styles.TextStyle16Bold,
+                    Image.asset(
+                      Assets.imagesBattikhaKart,
+                      height: 100,
                     ),
+                    const Spacer()
                   ],
                 ),
-                Image.asset(
-                  Assets.imagesBattikhaKart,
-                  height: 100,
+                const SizedBox(
+                  height: 24,
                 ),
-                const Spacer()
+                LoginOrSignUpCustomButton(
+                    onTap: () {
+                      Go.toReplace(const LoginView());
+                    },
+                    text: "تسجيل الدخول",
+                    color: Colors.red),
+                const SizedBox(
+                  height: 16,
+                ),
+                LoginOrSignUpCustomButton(
+                    onTap: () {
+                      Go.toReplace(const SignupView());
+                    },
+                    text: "انشئ حساب",
+                    color: Colors.green),
               ],
             ),
-            const SizedBox(
-              height: 24,
+          );
+        } else {
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  children: [
+                    const Spacer(),
+                    Column(
+                      children: [
+                        Text(
+                          "سلـــــــــتي",
+                          style: Styles.TextStyle30Bold.copyWith(
+                              color: Colors.red),
+                        ),
+                        const Text(
+                          "S  E  L  A  T  Y",
+                          style: Styles.TextStyle16Bold,
+                        ),
+                      ],
+                    ),
+                    Image.asset(
+                      Assets.imagesBattikhaKart,
+                      height: 100,
+                    ),
+                    const Spacer()
+                  ],
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                LoginOrSignUpCustomButton(
+                    width: width / 3,
+                    onTap: () {
+                      Go.toReplace(const LoginView());
+                    },
+                    text: "تسجيل الدخول",
+                    color: Colors.red),
+                const SizedBox(
+                  height: 16,
+                ),
+                LoginOrSignUpCustomButton(
+                    width: width / 3,
+                    onTap: () {
+                      Go.toReplace(const SignupView());
+                    },
+                    text: "انشئ حساب",
+                    color: Colors.green),
+              ],
             ),
-            LoginOrSignUpCustomButton(
-                onTap: () {
-                  Go.toReplace(const LoginView());
-                },
-                text: "تسجيل الدخول",
-                color: Colors.red),
-            const SizedBox(
-              height: 16,
-            ),
-            LoginOrSignUpCustomButton(
-                onTap: () {
-                  Go.toReplace(const SignupView());
-                },
-                text: "انشئ حساب",
-                color: Colors.green),
-          ],
-        ),
-      ),
+          );
+        }
+      }),
     );
   }
 }

@@ -36,7 +36,7 @@ class LastItem extends StatelessWidget {
           const Spacer(),
           Image.asset(
             Assets.imagesSmallFruits,
-            height: height / 10.2,
+            height: height / 9,
           ),
           const SizedBox(
             height: 12,

@@ -3,16 +3,17 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 
-class FruitsImageListView extends StatefulWidget {
-  const FruitsImageListView({
+class LandescapeFruitsImageListview extends StatefulWidget {
+  const LandescapeFruitsImageListview({
     super.key,
   });
 
   @override
-  State<FruitsImageListView> createState() => _FruitsImageListViewState();
+  State<LandescapeFruitsImageListview> createState() =>
+      _FruitsImageListViewState();
 }
 
-class _FruitsImageListViewState extends State<FruitsImageListView> {
+class _FruitsImageListViewState extends State<LandescapeFruitsImageListview> {
   final ScrollController _scrollController = ScrollController();
   Timer? _timer;
 
@@ -54,7 +55,7 @@ class _FruitsImageListViewState extends State<FruitsImageListView> {
     double ListViewheight = MediaQuery.of(context).size.height;
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: ListViewheight / 7.5,
+        height: ListViewheight / 4.5,
         child: ListView.builder(
           controller: _scrollController,
           scrollDirection: Axis.horizontal,
