@@ -9,11 +9,13 @@ class BestSellerGridView extends StatelessWidget {
     this.gridHeight,
     this.childAspectRatio,
     this.onTap,
+    this.crossAxisCount,
   });
   final Axis? scrollDirection;
   final void Function()? onTap;
   final double? gridHeight;
   final double? childAspectRatio;
+  final int? crossAxisCount;
   @override
   Widget build(BuildContext context) {
     // double height = MediaQuery.of(context).size.height;
@@ -21,7 +23,8 @@ class BestSellerGridView extends StatelessWidget {
       height: gridHeight,
       child: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: childAspectRatio!, crossAxisCount: 2),
+              childAspectRatio: childAspectRatio!,
+              crossAxisCount: crossAxisCount ?? 2),
           reverse: true,
           scrollDirection: scrollDirection!,
           itemCount: 16,

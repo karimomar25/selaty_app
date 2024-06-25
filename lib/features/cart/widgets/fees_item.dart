@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/styles.dart';
 
 class FeesItem extends StatelessWidget {
-  const FeesItem({super.key});
-
+  const FeesItem({super.key, this.feesItemHieght});
+  final double? feesItemHieght;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
 
     return Container(
       padding: const EdgeInsets.all(16),
-      height: height / 5,
+      height: feesItemHieght ?? height / 5,
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8), color: Colors.white),

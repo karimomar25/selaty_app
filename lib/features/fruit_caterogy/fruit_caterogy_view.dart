@@ -18,80 +18,173 @@ class FruitCaterogyView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey.shade300,
-        body: Column(
-          children: [
-            Container(
-              color: const Color(0xff29C17B),
-              height: 8,
-            ),
-            Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Container(
-                  height: height / 6.4,
-                  decoration: const BoxDecoration(color: Color(0xff29C17B)),
-                ),
-                Positioned(
-                  top: 25,
-                  child: SizedBox(
-                    width: width,
-                    child: FruitViewTopRow(
-                      onPressedBackArrow: () {
-                        Go.backAndTo(const CaterogyView());
-                      },
-                      textColor: Colors.white,
-                      text: "الفاكهة",
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-                Positioned(
-                    left: width / 2.5,
-                    top: height / 9.5,
-                    child: const CircleAnanasItem()),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Column(
+        body: OrientationBuilder(
+          builder: (context, orientation) {
+            if (orientation == Orientation.portrait) {
+              return Column(
                 children: [
-                  const SizedBox(
-                    height: 60,
+                  Container(
+                    color: const Color(0xff29C17B),
+                    height: 8,
                   ),
-                  Row(
+                  Stack(
+                    clipBehavior: Clip.none,
                     children: [
-                      const Expanded(child: CustomSearchBar()),
-                      const SizedBox(
-                        width: 10,
-                      ),
                       Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.red),
-                        child: const Icon(
-                          Icons.menu,
-                          color: Colors.white,
+                        height: height / 6.4,
+                        decoration:
+                            const BoxDecoration(color: Color(0xff29C17B)),
+                      ),
+                      Positioned(
+                        top: 25,
+                        child: SizedBox(
+                          width: width,
+                          child: FruitViewTopRow(
+                            onPressedBackArrow: () {
+                              Go.backAndTo(const CaterogyView());
+                            },
+                            textColor: Colors.white,
+                            text: "الفاكهة",
+                            color: Colors.black,
+                          ),
                         ),
-                      )
+                      ),
+                      Positioned(
+                          left: width / 2.5,
+                          top: height / 9.5,
+                          child: const CircleAnanasItem()),
                     ],
                   ),
-                  const SizedBox(
-                    height: 16,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 60,
+                        ),
+                        Row(
+                          children: [
+                            const Expanded(child: CustomSearchBar()),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: Colors.red),
+                              child: const Icon(
+                                Icons.menu,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        BestSellerGridView(
+                          onTap: () {
+                            Go.to(const CartView());
+                          },
+                          scrollDirection: Axis.vertical,
+                          childAspectRatio: 0.8,
+                          gridHeight: height / 1.8,
+                        )
+                      ],
+                    ),
                   ),
-                  BestSellerGridView(
-                    onTap: () {
-                      Go.to(const CartView());
-                    },
-                    scrollDirection: Axis.vertical,
-                    childAspectRatio: 0.8,
-                    gridHeight: height / 1.8,
-                  )
                 ],
-              ),
-            ),
-          ],
+              );
+            } else {
+              return ListView(
+                children: [
+                  // Container(
+                  //   color: const Color(0xff29C17B),
+                  //   height: 8,
+                  // ),
+                  Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      Container(
+                        height: height / 4.6,
+                        decoration:
+                            const BoxDecoration(color: Color(0xff29C17B)),
+                      ),
+                      Positioned(
+                        // top: 25,
+                        child: SizedBox(
+                          width: width,
+                          child: FruitViewTopRow(
+                            onPressedBackArrow: () {
+                              Go.backAndTo(const CaterogyView());
+                            },
+                            textColor: Colors.white,
+                            text: "الفاكهة",
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                          left: width / 2.35,
+                          top: height / 9.5,
+                          child: const CircleAnanasItem()),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 50,
+                        ),
+                        Row(
+                          children: [
+                            const Expanded(child: CustomSearchBar()),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: Colors.red),
+                              child: const Icon(
+                                Icons.menu,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        BestSellerGridView(
+                          childAspectRatio: 1.4,
+                          gridHeight: height / 1,
+                          scrollDirection: Axis.horizontal,
+                          onTap: () {
+                            Go.to(const CartView());
+                          },
+                        ),
+                        // BestSellerGridView(
+                        //   crossAxisCount: 4,
+                        //   onTap: () {
+                        //     Go.to(const CartView());
+                        //   },
+                        //   scrollDirection: Axis.vertical,
+                        //   childAspectRatio: 2,
+                        //   gridHeight: height / 2,
+                        // )
+                      ],
+                    ),
+                  ),
+                ],
+              );
+            }
+          },
         ),
       ),
     );

@@ -9,28 +9,62 @@ class CaterogyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey.shade300,
-        body: Padding(
-          padding: const EdgeInsets.only(right: 16),
-          child: Column(
-            children: [
-              CustomTopRow(
-                color: Colors.black,
-                text: "التصنيفات",
-                onPressedBackArrow: () {
-                  Go.backAndTo(const CustomCurvedNavigationBar());
-                },
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              const SizedBox(
-                child: CaterogyGridView(),
-              ),
-            ],
-          ),
+        body: OrientationBuilder(
+          builder: (context, orientation) {
+            if (orientation == Orientation.portrait) {
+              return Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: Column(
+                  children: [
+                    CustomTopRow(
+                      color: Colors.black,
+                      text: "التصنيفات",
+                      onPressedBackArrow: () {
+                        Go.backAndTo(const CustomCurvedNavigationBar());
+                      },
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const SizedBox(
+                      child: CaterogyGridView(),
+                    ),
+                  ],
+                ),
+              );
+            } else {
+              return Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: Column(
+                  children: [
+                    CustomTopRow(
+                      color: Colors.black,
+                      text: "التصنيفات",
+                      onPressedBackArrow: () {
+                        Go.backAndTo(const CustomCurvedNavigationBar());
+                      },
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    SizedBox(
+                      child: CaterogyGridView(
+                        landescapeImageHeight: height / 5,
+                        crossAxisCount: 4,
+                        // childAspectRatio: 1.8,
+                        gridHeight: height / 1.3,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }
+          },
         ),
       ),
     );

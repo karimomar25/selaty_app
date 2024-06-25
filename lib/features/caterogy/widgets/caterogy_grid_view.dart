@@ -6,19 +6,27 @@ import 'package:short_navigation/short_navigation.dart';
 class CaterogyGridView extends StatelessWidget {
   const CaterogyGridView({
     super.key,
+    this.crossAxisCount,
+    this.gridHeight,
+    this.childAspectRatio,
+    this.landescapeImageHeight,
   });
-
+  final int? crossAxisCount;
+  final double? gridHeight;
+  final double? childAspectRatio;
+  final double? landescapeImageHeight;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return SizedBox(
-      height: height / 1.2,
+      height: gridHeight ?? height / 1.2,
       child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 1, crossAxisCount: 2),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              childAspectRatio: childAspectRatio ?? 1,
+              crossAxisCount: crossAxisCount ?? 2),
           reverse: true,
           scrollDirection: Axis.vertical,
-          itemCount: 10,
+          itemCount: 12,
           itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.only(left: 16, bottom: 10),
                 child: Align(
@@ -27,7 +35,9 @@ class CaterogyGridView extends StatelessWidget {
                         onTap: () {
                           Go.to(const FruitCaterogyView());
                         },
-                        child: const CustomCaterogyItem())),
+                        child: CustomCaterogyItem(
+                          imageHeight: landescapeImageHeight,
+                        ))),
               )),
     );
   }

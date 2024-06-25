@@ -3,6 +3,7 @@ import 'package:selaty_app/features/auth/presentation/signup/widgets/custom_butt
 import 'package:selaty_app/features/cart/empty_cart_view.dart';
 import 'package:selaty_app/features/cart/widgets/cart_item.dart';
 import 'package:selaty_app/features/cart/widgets/fees_item.dart';
+import 'package:selaty_app/features/cart/widgets/landescape_cart_item.dart';
 import 'package:selaty_app/features/fruit_caterogy/fruit_caterogy_view.dart';
 import 'package:selaty_app/features/fruit_caterogy/widgets/fruit_view_top_row.dart';
 import 'package:short_navigation/short_navigation.dart';
@@ -21,43 +22,90 @@ class _CartViewState extends State<CartView> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey.shade300,
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: [
-              FruitViewTopRow(
-                  onPressedBackArrow: () {
-                    Go.backAndTo(const FruitCaterogyView());
-                  },
-                  textColor: Colors.black,
-                  text: "عربة التسوق",
-                  color: Colors.black),
-              SizedBox(
-                height: height / 1.8,
-                child: ListView.builder(
-                  itemCount: 10,
-                  itemBuilder: (context, index) {
-                    return const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 6),
-                      child: CartItem(),
-                    );
-                  },
-                ),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              const FeesItem(),
-              const SizedBox(
-                height: 16,
-              ),
-              GestureDetector(
-                  onTap: () {
-                    Go.to(const EmptyCartView());
-                  },
-                  child: const CustomButton(text: "الدفع", color: Colors.green))
-            ],
-          ),
+        body: OrientationBuilder(
+          builder: (context, orientation) {
+            if (orientation == Orientation.portrait) {
+              return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: ListView(
+                    children: [
+                      FruitViewTopRow(
+                          onPressedBackArrow: () {
+                            Go.backAndTo(const FruitCaterogyView());
+                          },
+                          textColor: Colors.black,
+                          text: "عربة التسوق",
+                          color: Colors.black),
+                      SizedBox(
+                        height: height / 1.8,
+                        child: ListView.builder(
+                          itemCount: 10,
+                          itemBuilder: (context, index) {
+                            return const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 6),
+                              child: CartItem(),
+                            );
+                          },
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      const FeesItem(),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      GestureDetector(
+                          onTap: () {
+                            Go.to(const EmptyCartView());
+                          },
+                          child: const CustomButton(
+                              text: "الدفع", color: Colors.green))
+                    ],
+                  ));
+            } else {
+              return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: ListView(
+                    children: [
+                      FruitViewTopRow(
+                          onPressedBackArrow: () {
+                            Go.backAndTo(const FruitCaterogyView());
+                          },
+                          textColor: Colors.black,
+                          text: "عربة التسوق",
+                          color: Colors.black),
+                      SizedBox(
+                        height: height / 1.8,
+                        child: ListView.builder(
+                          itemCount: 10,
+                          itemBuilder: (context, index) {
+                            return const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 6),
+                              child: LandscapeCartItem(),
+                            );
+                          },
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      FeesItem(
+                        feesItemHieght: height / 2.1,
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      GestureDetector(
+                          onTap: () {
+                            Go.to(const EmptyCartView());
+                          },
+                          child: const CustomButton(
+                              text: "الدفع", color: Colors.green))
+                    ],
+                  ));
+            }
+          },
         ),
       ),
     );
