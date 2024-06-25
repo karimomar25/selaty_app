@@ -15,7 +15,7 @@ class OrderingView extends StatelessWidget {
         backgroundColor: Colors.grey.shade300,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
+          child: ListView(
             children: [
               const FruitViewTopRow(
                   text: "ترتيب المسار",

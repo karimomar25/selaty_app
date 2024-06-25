@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 import 'package:selaty_app/features/Home/presentation/widgets/landescape_widgets/landescape_fruits_image_listview.dart';

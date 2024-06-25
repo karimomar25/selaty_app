@@ -186,7 +186,7 @@ class SignupView extends StatelessWidget {
                         CustomForm(
                           width: width / 3,
                           text: "عنوان البريد الالكتروني",
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.done,
                             color: Colors.green,
                           ),
@@ -209,12 +209,12 @@ class SignupView extends StatelessWidget {
                         CustomForm(
                           width: width / 3,
                           text: "تأكيد كلمة المرور",
-                          icon: Icon(Icons.visibility),
+                          icon: const Icon(Icons.visibility),
                         ),
                         CustomForm(
                           width: width / 3,
                           text: "كلمة المرور",
-                          icon: Icon(Icons.visibility),
+                          icon: const Icon(Icons.visibility),
                         ),
                       ],
                     ),
@@ -225,9 +225,9 @@ class SignupView extends StatelessWidget {
                         onTap: () {
                           Go.toReplace(const PhoneAuth());
                         },
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 75),
-                          child: const CustomButton(
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 75),
+                          child: CustomButton(
                             text: "اشتراك",
                             color: Colors.green,
                           ),
@@ -235,9 +235,9 @@ class SignupView extends StatelessWidget {
                     const SizedBox(
                       height: 8,
                     ),
-                    Align(
+                    const Align(
                         alignment: Alignment.center,
-                        child: const Text("او اشترك مع")),
+                        child: Text("او اشترك مع")),
                     const SizedBox(
                       height: 10,
                     ),

@@ -51,6 +51,7 @@ class _FruitsImageListViewState extends State<FruitsImageListView> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names
     double ListViewheight = MediaQuery.of(context).size.height;
     return SliverToBoxAdapter(
       child: SizedBox(

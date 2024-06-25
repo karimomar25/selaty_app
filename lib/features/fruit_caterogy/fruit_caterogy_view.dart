@@ -108,7 +108,7 @@ class FruitCaterogyView extends StatelessWidget {
                     clipBehavior: Clip.none,
                     children: [
                       Container(
-                        height: height / 4.6,
+                        height: height / 6,
                         decoration:
                             const BoxDecoration(color: Color(0xff29C17B)),
                       ),
@@ -127,9 +127,12 @@ class FruitCaterogyView extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                          left: width / 2.35,
-                          top: height / 9.5,
-                          child: const CircleAnanasItem()),
+                          left: width / 2.24,
+                          top: height / 11,
+                          child: const CircleAnanasItem(
+                            maxRadius: 25,
+                            ananasaMaxRadius: 15,
+                          )),
                     ],
                   ),
                   Padding(
@@ -137,7 +140,7 @@ class FruitCaterogyView extends StatelessWidget {
                     child: Column(
                       children: [
                         const SizedBox(
-                          height: 50,
+                          height: 22,
                         ),
                         Row(
                           children: [

@@ -14,7 +14,7 @@ class CustomCaterogyItem extends StatelessWidget {
       color: Colors.white,
       child: Column(
         children: [
-          Spacer(),
+          const Spacer(),
           const Text(
             "فواكه",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
@@ -23,7 +23,7 @@ class CustomCaterogyItem extends StatelessWidget {
           //   maxRadius: 35,
           //   backgroundColor: Colors.orange,
           // ),
-          Spacer(
+          const Spacer(
             flex: 3,
           ),
           Stack(
@@ -40,10 +40,10 @@ class CustomCaterogyItem extends StatelessWidget {
                         bottomRight: Radius.circular(8),
                         bottomLeft: Radius.circular(8))),
               ),
-              Positioned(
+              const Positioned(
                 left: 55,
                 bottom: 50,
-                child: const CircleAvatar(
+                child: CircleAvatar(
                   maxRadius: 35,
                   backgroundColor: Colors.orange,
                 ),
