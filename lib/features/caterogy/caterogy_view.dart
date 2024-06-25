@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:selaty_app/features/caterogy/widgets/landescape_caterogy_gridview.dart';
 import 'package:selaty_app/features/home/presentation/custom_curved_navigation_bar.dart';
 import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/custom_auth_top_row.dart';
 import 'package:selaty_app/features/caterogy/widgets/caterogy_grid_view.dart';
@@ -84,7 +85,7 @@ class CaterogyView extends StatelessWidget {
                       height: 16,
                     ),
                     SizedBox(
-                      child: CaterogyGridView(
+                      child: LandescapeCaterogyGridView(
                         landescapeImageHeight: height / 5,
                         crossAxisCount: 4,
                         // childAspectRatio: 1.8,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
+import 'package:selaty_app/features/Home/presentation/widgets/landescape_widgets/landescape_caterogy_item_listview.dart';
 import 'package:selaty_app/features/Home/presentation/widgets/landescape_widgets/landescape_fruits_image_listview.dart';
 import 'package:selaty_app/features/Home/presentation/widgets/modal_sheet_widget.dart';
 import 'package:selaty_app/features/home/presentation/widgets/best_seller_gridview.dart';
@@ -242,7 +243,7 @@ class HomeView extends StatelessWidget {
                       text2: "",
                     ),
                   ),
-                  CaterogyItemListView(
+                  LandescapeCaterogyItemListView(
                     height: MediaQuery.of(context).size.height / 3.2,
                     itemCount: 15,
                     scrollDirection: Axis.horizontal,

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 
-class CaterogyItem extends StatelessWidget {
-  const CaterogyItem({super.key});
+class LandescapeCaterogyItem extends StatelessWidget {
+  const LandescapeCaterogyItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+
     return Container(
-        width: width / 4.5,
+        width: 90,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           color: Colors.white,
@@ -27,16 +27,16 @@ class CaterogyItem extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               Container(
-                width: width / 4.5,
-                height: height / 14.2,
+                width: 90,
+                height: 60,
                 decoration: const BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage(Assets.imagesFruitsCover))),
               ),
               Positioned(
-                bottom: height / 23,
-                left: height / 38,
+                bottom: height / 10,
+                left: height / 15,
                 child: CircleAvatar(
                   backgroundColor: Colors.orange,
                 ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/core/utils/app_images.dart';
 
-class CustomCaterogyItem extends StatelessWidget {
-  const CustomCaterogyItem({super.key, this.imageHeight});
+class LandescapeCustomCaterogyItem extends StatelessWidget {
+  const LandescapeCustomCaterogyItem({super.key, this.imageHeight});
 
   final double? imageHeight;
   @override
@@ -37,10 +37,10 @@ class CustomCaterogyItem extends StatelessWidget {
                         bottomLeft: Radius.circular(8))),
               ),
               Positioned(
-                left: height / 14.5,
-                bottom: height / 22.5,
+                left: height / 7,
+                bottom: height / 8,
                 child: CircleAvatar(
-                  maxRadius: 35,
+                  maxRadius: 25,
                   backgroundColor: Colors.orange,
                 ),
               ),

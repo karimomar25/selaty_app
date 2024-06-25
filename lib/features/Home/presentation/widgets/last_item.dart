@@ -15,7 +15,7 @@ class LastItem extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(
-            height: 12,
+            height: 10,
           ),
           const Align(
             alignment: Alignment.centerRight,
@@ -39,7 +39,7 @@ class LastItem extends StatelessWidget {
             height: height / 9,
           ),
           const SizedBox(
-            height: 12,
+            height: 10,
           ),
           const Spacer(),
           Stack(
