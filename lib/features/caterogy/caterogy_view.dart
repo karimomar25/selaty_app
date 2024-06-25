@@ -57,7 +57,7 @@ class CaterogyView extends StatelessWidget {
                         landescapeImageHeight: height / 5,
                         crossAxisCount: 4,
                         // childAspectRatio: 1.8,
-                        gridHeight: height / 1.3,
+                        gridHeight: height / 1.5,
                       ),
                     ),
                   ],
