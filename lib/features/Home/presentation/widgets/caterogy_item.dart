@@ -6,41 +6,68 @@ class CaterogyItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          width: 90,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: Colors.white,
-          ),
+    double height = MediaQuery.of(context).size.height;
+
+    return Container(
+        width: 90,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Colors.white,
         ),
-        const Positioned(
-            top: 10,
-            left: 22.5,
-            child: Text(
-              "فواكه",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )),
-        Positioned(
-          top: 60,
-          child: Container(
-            width: 90,
-            height: 80,
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(Assets.imagesFruitsCover))),
+        child: Column(children: [
+          Text(
+            "فواكه",
+            style: TextStyle(fontWeight: FontWeight.bold),
           ),
-        ),
-        const Positioned(
-          top: 35,
-          left: 22.5,
-          child: CircleAvatar(
-            backgroundColor: Colors.orange,
+          Spacer(),
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
+              Container(
+                width: 90,
+                height: 60,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(Assets.imagesFruitsCover))),
+              ),
+              Positioned(
+                bottom: height / 23,
+                left: height / 38,
+                child: CircleAvatar(
+                  backgroundColor: Colors.orange,
+                ),
+              ),
+            ],
           ),
-        ),
-      ],
-    );
+        ]));
+
+    // const Positioned(
+    //     top: 10,
+    //     left: 22.5,
+    //     child:
+
+    // Text(
+    //       "فواكه",
+    //       style: TextStyle(fontWeight: FontWeight.bold),
+    //     )),
+    // Positioned(
+    //   top: 60,
+    //   child: Container(
+    //     width: 90,
+    //     height: 80,
+    //     decoration: const BoxDecoration(
+    //         image: DecorationImage(
+    //             fit: BoxFit.cover,
+    //             image: AssetImage(Assets.imagesFruitsCover))),
+    //   ),
+    // ),
+    // const Positioned(
+    //   top: 35,
+    //   left: 22.5,
+    //   child: CircleAvatar(
+    //     backgroundColor: Colors.orange,
+    //   ),
+    // )
   }
 }
