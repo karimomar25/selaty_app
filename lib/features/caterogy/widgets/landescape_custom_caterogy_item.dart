@@ -39,7 +39,7 @@ class LandescapeCustomCaterogyItem extends StatelessWidget {
               Positioned(
                 left: height / 7,
                 bottom: height / 8,
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   maxRadius: 25,
                   backgroundColor: Colors.orange,
                 ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:selaty_app/features/Home/presentation/widgets/landescape_widgets/landescape_caterogy_item.dart';
+// ignore: unused_import
 import 'package:selaty_app/features/caterogy/widgets/custom_caterogy_item.dart';
 import 'package:selaty_app/features/caterogy/widgets/landescape_custom_caterogy_item.dart';
 import 'package:selaty_app/features/fruit_caterogy/fruit_caterogy_view.dart';

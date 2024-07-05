@@ -15,12 +15,12 @@ class LandescapeCaterogyItem extends StatelessWidget {
           color: Colors.white,
         ),
         child: Column(children: [
-          Spacer(),
-          Text(
+          const Spacer(),
+          const Text(
             "فواكه",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          Spacer(
+          const Spacer(
             flex: 2,
           ),
           Stack(
@@ -37,7 +37,7 @@ class LandescapeCaterogyItem extends StatelessWidget {
               Positioned(
                 bottom: height / 10,
                 left: height / 15,
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   backgroundColor: Colors.orange,
                 ),
               ),

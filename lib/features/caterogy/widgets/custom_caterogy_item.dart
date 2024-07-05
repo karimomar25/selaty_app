@@ -39,7 +39,7 @@ class CustomCaterogyItem extends StatelessWidget {
               Positioned(
                 left: height / 14.5,
                 bottom: height / 22.5,
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   maxRadius: 35,
                   backgroundColor: Colors.orange,
                 ),

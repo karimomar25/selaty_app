@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:selaty_app/features/Home/presentation/widgets/landescape_widgets/landescape_caterogy_item.dart';
-import 'package:selaty_app/features/home/presentation/widgets/caterogy_item.dart';
 
 class LandescapeCaterogyItemListView extends StatelessWidget {
   const LandescapeCaterogyItemListView({

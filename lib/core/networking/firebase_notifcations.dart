@@ -1,6 +1,5 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:selaty_app/features/notification_test/test.dart';
-import 'package:selaty_app/main.dart';
 import 'package:short_navigation/short_navigation.dart';
 
 class FirebaseNotifcations {
@@ -13,13 +12,14 @@ class FirebaseNotifcations {
     await _firebaseMessaging.requestPermission();
     // take the token -- every device has its own tkoen
     String? token = await _firebaseMessaging.getToken();
+    // ignore: avoid_print
     print("Token: $token");
-    handelBackgroundNotification();
-
     // >> go to main and call this func
+
+    handelBackgroundNotification();
   }
 
-  // B- create f func to handele the notication
+  // B- create a func to handele the notification
 
   void hendelMessage(RemoteMessage? message) {
     if (message == null) return;
