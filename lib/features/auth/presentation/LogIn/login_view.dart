@@ -10,6 +10,7 @@ import 'package:selaty_app/features/auth/presentation/Login_Or_Signup/widgets/cu
 import 'package:selaty_app/features/auth/presentation/SignUp/signup_view.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_button.dart';
 import 'package:selaty_app/features/auth/presentation/SignUp/widgets/custom_form.dart';
+import 'package:selaty_app/main.dart';
 import 'package:short_navigation/short_navigation.dart';
 
 class LoginView extends StatelessWidget {
@@ -99,6 +100,7 @@ class LoginView extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
+                        scheduleNotification();
                         Go.toRemoveAll(const CustomCurvedNavigationBar());
                       },
                       child: const CustomButton(
